@@ -9,13 +9,13 @@ before_cache:
 - rm -f $HOME/.meteor/log/*.log
 before_install:
 - export PATH="$HOME/.meteor:$PATH"
-- openssl enc -d -aes-256-cbc -in testfile.txt.enc -out testfile.txt -k "$encrypted_key_master"
+- openssl enc -d -aes-256-cbc -in testfile.txt.enc -out testfile.txt -k "$super_secret_password"
 - cat testfile.txt
 branches:
   only:
   - master
   - fl-sleeper
-script: 
+script:
 env:
   global:
     secure: tXTxZRMDwmmMbyuyBUqorEcn/LFC9cT4EOkVOxPypehbZ5Zo27ox6CGFPjzYKs0BnU8hvf/tZS9dU8arKKsqc0nngeJxyEpbFZBW/x/Y1w/n3baFzywL1dn1Na7GU1RxUAzqRG4G+U0VgUYxetlUolDNUc0/n4ndfGAowhSDOeWe7fN2zc1IVyBRO21zulvAhBUjjYqz3gmr6xv6g7aRHZv0F3P5z3L8fyHQ8Vf9XAoBCWT7HRjT7ZdhysCSfX7FpTRhlPPVXHHW1ipChNzEOOuQRdeBNIFEgUKN/XX2wsee+C/VHujPRJRaZqujw+5TnURZQBdI7vB1k+uYCh9Hoi+hhPCQKY3dK2Uuy0cZ3oBKgv1HVnS9/NLT2cTX5BeEj1pnpaZHEOB6kGg+sVq9mBkrPqEg4xWTXsps1mhAFnk4gVsSlVdowP7PnsiWHygDpNc2Zzav8CCg7aWrjGncY+Rtf11PAA7MLvUR2ZMNQroGMS85599QXCLIvkLgkVbuQRGoOumMKXi7AaDSYoZaKAqE9eF4ymgNOzohPmtT0kk0+KySUxuxq/TyHcGAR3C03q3VVHV9U8BRk+5R3WtVzSsMayDnTpz3EBi5lK3TOUiF4GcqXNTJFRuThUlCrC0BMp412MS9pQQIxFqAFK99kZeskHlT3E3mtSM42QVstOE=
